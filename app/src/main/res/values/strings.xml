@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">FoodAI</string>
+    <string name="align_food">Align your food in the frame</string>
+    <string name="gallery">Gallery</string>
+    <string name="flash">Flash</string>
+    <string name="ai_food_id">AI food identification</string>
+    <string name="nutrition_estimate">Nutrition Estimate</string>
+    <string name="calories">Calories</string>
+    <string name="carbs">Carbs</string>
+    <string name="protein">Protein</string>
+    <string name="fat">Fat</string>
+    <string name="per_100g">per 100g</string>
+    <string name="nutrition_note">Nutrition values are estimates and may vary based on portion size.</string>
+    <string name="scan_title">Scan Meal with AI</string>
+    <string name="scan_subtitle">Discover what\'s on your plate\nwith the power of artificial intelligence.</string>
+    <string name="camera_quality">Camera Quality</string>
+    <string name="camera_quality_sub">Ready for scanning</string>
+    <string name="internet_speed">Internet Speed</string>
+    <string name="internet_speed_sub">Fast and stable</string>
+    <string name="well_lit">Well Lit Room</string>
+    <string name="well_lit_sub">Good lighting detected</string>
+    <string name="lets_scan">Let\'s scan  →</string>
+    <string name="or_text">OR</string>
+    <string name="log_manually">Log food manually</string>
+</resources>
