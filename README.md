@@ -1,7 +1,7 @@
 # 🍎 FoodAI — AI-Powered Food Recognition Android App
 
 <p align="center">
-  **Smart Food Recognition | TensorFlow Lite | Android**
+  ⭐Smart Food Recognition | TensorFlow Lite | Android⭐
 </p>
 
 <p align="center">
