@@ -5,108 +5,139 @@
 
 FoodAI is an AI-based Android application developed as a mini-project for the Mobile Application Development course.
 
-The purpose of this application is to demonstrate the integration of Artificial Intelligence (AI) and Machine Learning (ML) into an Android application using TensorFlow Lite.
+The main purpose of this project is to demonstrate the integration of Artificial Intelligence (AI) and Machine Learning (ML) into an Android application using TensorFlow Lite.
 
-The application is designed to use a food classification model to recognize food items from images captured through the mobile camera. The model processes the input image and generates a prediction based on the food categories available in its labels file.
+The application is designed to recognize food items from images using a machine learning model. It uses Android development technologies, Java, CameraX, and TensorFlow Lite.
 
-**Project Name:** FoodAI  
-**Platform:** Android  
-**Programming Language:** Java  
-**AI Framework:** TensorFlow Lite  
-**Package Name:** `com.example.foodai`
+### Project Information
+
+- **Project Name:** FoodAI
+- **Platform:** Android
+- **Programming Language:** Java
+- **User Interface:** XML
+- **AI Framework:** TensorFlow Lite
+- **Camera Library:** CameraX
+- **Package Name:** `com.example.foodai`
 
 ## 2. Project Objectives
 
 - Develop an AI-based Android application.
 - Understand Android Studio project structure.
-- Integrate a TensorFlow Lite model into an Android project.
+- Integrate a TensorFlow Lite model into an Android application.
 - Understand image processing and model inference.
-- Use CameraX for camera functionality.
-- Display classification results through an Android interface.
-- Understand the basic workflow of AI-based mobile applications.
+- Implement camera functionality using CameraX.
+- Display application results through an Android interface.
+- Learn the basic workflow of AI-based mobile applications.
 
-## 3. Features
+## 3. Application Activities
 
-The planned application workflow includes:
+The FoodAI application contains the following five main Java Activities:
 
-- Android-based user interface.
+### 1. SplashActivity
+Responsible for displaying the splash screen when the application starts.
+
+### 2. LoginActivity
+Handles the login screen and provides the application's login interface.
+
+### 3. MainActivity
+Represents the main screen of the application and provides access to its main functionality.
+
+### 4. CameraActivity
+Handles camera-related functionality and provides image input for food recognition.
+
+### 5. ResultActivity
+Displays the result of the food classification process.
+
+### Additional Java Class
+
+**FoodClassifier.java**
+
+This class is responsible for handling the TensorFlow Lite model and performing food classification.
+
+## 4. Features
+
+The application is designed to include:
+
+- Splash screen.
+- Login interface.
+- Main application screen.
 - Camera integration using CameraX.
-- Image input for food recognition.
-- TensorFlow Lite model integration.
-- Food classification using the provided model.
-- Display of predicted results.
+- Food image classification using TensorFlow Lite.
+- Result display screen.
 
-**Note:** The availability and successful operation of each feature depend on the final model integration and application testing.
+Actual feature availability depends on successful implementation and testing.
 
-## 4. Technologies and Tools
+## 5. Technologies and Tools
 
 | Technology | Purpose |
 |---|---|
 | Android Studio | Android application development |
 | Java | Application programming |
 | XML | User interface design |
-| TensorFlow Lite | Machine learning model inference |
-| CameraX | Camera integration |
+| TensorFlow Lite | Machine learning model integration |
+| CameraX | Camera functionality |
 | Git | Version control |
 | GitHub | Source code hosting |
 
-## 5. Project Structure
+## 6. Project Structure
 
-The main project structure is:
+The main Java package structure is:
 
 ```text
 FoodAI/
 │
 ├── app/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/example/foodai/
-│   │       │       ├── MainActivity.java
-│   │       │       ├── CameraActivity.java
-│   │       │       ├── FoodClassifier.java
-│   │       │       └── ResultActivity.java
-│   │       │
-│   │       ├── assets/
-│   │       │   ├── model.tflite
-│   │       │   └── labels.txt
-│   │       │
-│   │       ├── res/
-│   │       └── AndroidManifest.xml
-│   │
-│   └── build.gradle
+│   └── src/
+│       └── main/
+│           ├── java/
+│           │   └── com/example/foodai/
+│           │       ├── CameraActivity.java
+│           │       ├── FoodClassifier.java
+│           │       ├── LoginActivity.java
+│           │       ├── MainActivity.java
+│           │       ├── ResultActivity.java
+│           │       └── SplashActivity.java
+│           │
+│           ├── assets/
+│           │   ├── model.tflite
+│           │   └── labels.txt
+│           │
+│           ├── res/
+│           └── AndroidManifest.xml
 │
 ├── build.gradle
 ├── settings.gradle
 └── README.md
 ```
 
-**Main Java Files:**
+### Description of Important Files
 
-- `MainActivity.java`: Handles the main application screen.
-- `CameraActivity.java`: Handles camera-related functionality.
-- `FoodClassifier.java`: Responsible for loading and using the TensorFlow Lite model.
-- `ResultActivity.java`: Displays the classification result.
+| File | Description |
+|---|---|
+| SplashActivity.java | Displays the application splash screen. |
+| LoginActivity.java | Provides the login interface. |
+| MainActivity.java | Handles the main application screen. |
+| CameraActivity.java | Handles camera-related operations. |
+| FoodClassifier.java | Loads and executes the TensorFlow Lite model. |
+| ResultActivity.java | Displays food classification results. |
+| model.tflite | Contains the TensorFlow Lite model. |
+| labels.txt | Contains the model's class labels. |
+| AndroidManifest.xml | Contains application and activity configurations. |
 
-**Assets:**
+## 7. Prerequisites
 
-- `model.tflite`: TensorFlow Lite machine learning model.
-- `labels.txt`: Contains the class labels used by the model.
-
-## 6. Prerequisites
-
-Before running the project, make sure you have:
+Before running this project, the following tools and requirements are needed:
 
 1. Android Studio installed.
 2. Android SDK configured.
-3. Java development environment compatible with the project's Gradle configuration.
-4. A physical Android device or Android Emulator.
-5. USB debugging enabled if using a physical device.
-6. Git installed (for cloning the repository).
+3. Java development environment compatible with the project.
+4. Android Emulator or physical Android device.
+5. Git installed for cloning the repository.
+6. Internet connection for downloading project dependencies.
 
-## 7. Dependencies
+## 8. Dependencies
 
-The project uses the following libraries:
+The project uses the following dependencies:
 
 ### CameraX Dependencies
 
@@ -123,139 +154,130 @@ implementation "androidx.camera:camera-view:1.3.4"
 implementation "org.tensorflow:tensorflow-lite:2.14.0"
 ```
 
-These dependencies provide camera functionality and TensorFlow Lite model inference.
+CameraX provides camera functionality, while TensorFlow Lite is used for machine learning model inference.
 
-## 8. Installation Instructions
+## 9. Installation Instructions
 
-Follow these steps to download and open the project.
+Follow these steps to install the project:
 
 ### Step 1: Clone the Repository
 
-Open the terminal or command prompt and run:
+Open the terminal or command prompt and execute:
 
 ```bash
 git clone https://github.com/safa699/FoodAI.git
 ```
 
-### Step 2: Open the Project
+### Step 2: Open in Android Studio
 
 1. Open Android Studio.
 2. Select **Open**.
-3. Navigate to the cloned FoodAI folder.
-4. Select the project folder.
-5. Wait for Gradle synchronization to complete.
+3. Browse to the cloned FoodAI project folder.
+4. Select the project and open it.
+5. Wait for Android Studio to load the project.
 
-### Step 3: Check Project Files
+### Step 3: Verify Project Files
 
-Verify that the following files are available:
+Make sure the following files are available:
 
+- SplashActivity.java
+- LoginActivity.java
 - MainActivity.java
 - CameraActivity.java
 - FoodClassifier.java
 - ResultActivity.java
 - model.tflite
 - labels.txt
-- AndroidManifest.xml
 
 ### Step 4: Sync Gradle
 
-In Android Studio:
-
-1. Open the project.
+1. Open the project in Android Studio.
 2. Select **File → Sync Project with Gradle Files**.
-3. Wait for synchronization to finish.
-4. Resolve any dependency or configuration errors if they appear.
+3. Wait for Gradle synchronization.
+4. Resolve any dependency or configuration errors if they occur.
 
-## 9. Execution Instructions
+## 10. Execution Instructions
 
 To run the application:
 
 1. Open the FoodAI project in Android Studio.
 2. Connect an Android device or start an emulator.
-3. Make sure the required camera permissions are configured.
-4. Select the `app` configuration.
+3. Make sure the required permissions are configured.
+4. Select the app run configuration.
 5. Click the **Run** button.
 6. Wait for the application to install and launch.
+7. Test the available application screens and functionality.
 
-If the camera feature is used, grant camera permission when requested.
+If the application uses the camera, grant camera permission when requested.
 
-**Important:** The application should only be considered successfully executed after the FoodAI project builds, installs, and its features have been tested on an emulator or physical device.
+**Note:** Successful execution should be confirmed by building, installing, and testing the FoodAI application.
 
-## 10. AI Model Integration
+## 11. AI Model Integration
 
 FoodAI uses TensorFlow Lite to integrate a machine learning model into the Android application.
 
-The model file is stored in:
+The model and labels are stored in the assets directory:
 
 ```text
 app/src/main/assets/model.tflite
-```
-
-The labels file is stored in:
-
-```text
 app/src/main/assets/labels.txt
 ```
 
-The general model inference workflow is:
+### General Model Workflow
 
-1. Capture or obtain an input image.
-2. Preprocess the image according to the model's input requirements.
+1. Capture or obtain an image.
+2. Preprocess the image according to the model requirements.
 3. Pass the processed image to the TensorFlow Lite interpreter.
 4. Execute model inference.
-5. Interpret the model output using the corresponding labels.
+5. Interpret the output using the labels file.
 6. Display the predicted result.
 
-**Note:** The model's input dimensions, preprocessing requirements, output format, and supported food categories must match the actual `model.tflite` file.
+The image dimensions, preprocessing method, model input format, and output format must match the actual TensorFlow Lite model.
 
-## 11. Troubleshooting
-
-Some common issues and their possible solutions are:
+## 12. Troubleshooting
 
 | Issue | Possible Solution |
 |---|---|
-| Gradle Sync Failed | Check internet connection and Gradle dependencies. |
-| Camera Not Working | Check camera permissions and device compatibility. |
-| Model Not Found | Verify the model file inside the assets folder. |
-| Labels Not Found | Check that labels.txt exists in the assets folder. |
-| App Not Installing | Check USB debugging and device installation permissions. |
-| Incorrect Prediction | Verify image preprocessing and model input/output configuration. |
+| Gradle Sync Failed | Check internet connection and dependencies. |
+| Camera Not Working | Check camera permissions. |
+| Model Not Found | Verify model.tflite in the assets folder. |
+| Labels Not Found | Verify labels.txt in the assets folder. |
+| App Not Installing | Check device connection and USB debugging. |
+| Incorrect Prediction | Verify image preprocessing and model configuration. |
 
-## 12. Future Improvements
+## 13. Future Improvements
 
 The project can be improved by:
 
-- Adding support for more food categories.
+- Adding more food categories.
 - Improving model accuracy.
 - Adding image selection from the gallery.
 - Improving the user interface.
 - Displaying prediction confidence.
-- Adding food information and nutritional details.
+- Providing nutritional information about recognized food items.
 
-## 13. Acknowledgements
+## 14. Acknowledgements
 
 This project was developed for academic purposes as part of the Mobile Application Development course.
 
-The project uses Android development tools, CameraX, and TensorFlow Lite.
+The project uses Android Studio, Java, CameraX, and TensorFlow Lite.
 
-**Instructor Reference Repository:**
+### Instructor Reference Repository
 
 https://github.com/Uzair390-Del/NumberGuessingAppTflite
 
-The instructor's repository is used as a reference for understanding TensorFlow Lite integration in Android. It is not the FoodAI food-classification model.
+This repository is used as a reference for understanding TensorFlow Lite integration in Android applications. It is not the FoodAI food classification model.
 
-## 14. Student Information
+## 15. Student Information
 
-**Student Name:** Safa Waseem  
-**Registration Number:** 242201054  
-**Program:** BS Computer Science  
-**Section:** BSCS 5-B  
-**Institute:** KICSIT, IST Kahuta Campus  
-**Course:** Mobile Application Development  
-**Instructor:** Sir Uzair Hassan
+- **Student Name:** Safa Waseem
+- **Registration Number:** 242201054
+- **Program:** BS Computer Science
+- **Section:** BSCS 5-B
+- **Institute:** KICSIT, IST Kahuta Campus
+- **Course:** Mobile Application Development
+- **Instructor:** Sir Uzair Hassan
 
----
-
-## 15. License
+## 16. License
 
 This project is developed for educational and academic purposes.
