@@ -310,7 +310,7 @@ This project is developed for educational and academic purposes.
 ---
 
 <p align="center">
-  **FoodAI — Making Food Recognition Smarter with AI 🍎**
+  ⭐FoodAI — Making Food Recognition Smarter with AI 🍎⭐
 </p>
 
 <p align="center">
